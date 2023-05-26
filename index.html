@@ -13,13 +13,14 @@ var text = document.querySelector("#text");
 
 
 $("button").click(function(){
-  $.post("https://agreeable-beret-moth.cyclic.app/nvgh/laydonhang/",
-  {
-    id: 6,
-  },
-  function(data, status){
-    alert("Data: " + data + "\nStatus: " + status);
-  });
+  $.ajax({
+    url: "https://agreeable-beret-moth.cyclic.app/nvgh/laydonhang/?id=6",
+    type: 'GET',
+    success: function(res) {
+        console.log(res);
+        alert(res);
+    }
+});
 });
 
 </script>
