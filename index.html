@@ -1,3 +1,21 @@
 <html>
 kiet dep zai
+
+
+<div id="text"></div>
+
+<button>get</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+
+var text = document.querySelector("#text");
+
+$("button").click(function(){
+  $.get("https://agreeable-beret-moth.cyclic.app/nvgh/laydonhang/?id=6", function(data, status){
+    text.innerHTML = data
+  });
+});
+
+</script>
 </html>
