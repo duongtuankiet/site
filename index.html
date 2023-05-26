@@ -11,9 +11,14 @@ kietabc
 
 var text = document.querySelector("#text");
 
+
 $("button").click(function(){
-  $.get("https://agreeable-beret-moth.cyclic.app/nvgh/laydonhang/?id=6", function(data, status){
-    text.innerHTML = data
+  $.post("https://agreeable-beret-moth.cyclic.app/nvgh/laydonhang/",
+  {
+    id: 6,
+  },
+  function(data, status){
+    alert("Data: " + data + "\nStatus: " + status);
   });
 });
 
